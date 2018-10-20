@@ -1,0 +1,5 @@
+name: city-walker
+dependencies:
+- python=3.7.0
+- flask
+- pip
