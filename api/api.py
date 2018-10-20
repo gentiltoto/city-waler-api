@@ -1,5 +1,5 @@
 import flask
-from flask import request, jsonify
+from flask import request, jsonify, render_template
 from twitterscraper import query_tweets
 import datetime as dt
 import re
@@ -22,7 +22,7 @@ def create_app():
 
     @app.route('/', methods=['GET'])
     def home():
-        return "<h1>Distant Reading Archive</h1><p>This site is a prototype API for distant reading of science fiction novels.</p>"
+        return render_template('index.html')
 
     @app.route('/api/v1/resources/tweets', methods=['GET'])
     def api_query():
@@ -88,7 +88,8 @@ def create_app():
                     "likes": tweet.likes,
                     "replies": tweet.replies,
                     "retweets": tweet.retweets,
-                    "text": tweet.text
+                    "text": tweet.text,
+                    "timestamp" : tweet.timestamp
                 }
             )
 
