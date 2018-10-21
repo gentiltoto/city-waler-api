@@ -79,7 +79,7 @@ def create_app():
         # Create the result list
         results = []
 
-        tweets = query_tweets(query, begindate = begindate)
+        tweets = query_tweets(query, begindate = begindate, enddate = enddate)
 
         for tweet in tweets:
             results.append(
