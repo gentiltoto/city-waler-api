@@ -1,1 +1,1 @@
-web: gunicorn app:citywalkerapi
+web: gunicorn app:app
