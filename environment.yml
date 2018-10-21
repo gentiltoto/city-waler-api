@@ -1,0 +1,9 @@
+name: city-walker-api
+dependencies:
+- python=3.7.0
+- flask
+- pytest
+- gunicorn
+- pip:
+  - twitterscraper
+  - flask-pytest
