@@ -78,7 +78,7 @@ def api_query():
     # Create the result list
     results = []
 
-    tweets = query_tweets(query, begindate = begindate, enddate = enddate)
+    tweets = query_tweets(query, begindate = begindate, enddate = enddate, limit = None)
 
     for tweet in tweets:
         results.append(
